@@ -1,0 +1,222 @@
+<!-- email_templates/email_template.html
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .highlight {
+        background-color: #ffffcc;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hello {{ name }}!</p>
+    <p class="highlight">
+      This is a test email sent to {{ name }}. Your employee ID is {{
+      employee_id }}.
+    </p>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /* Reset styles */
+      body,
+      #bodyTable,
+      #bodyCell {
+        height: 100% !important;
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      img,
+      a img {
+        border: 0;
+        outline: none;
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        margin: 1em 0;
+        padding: 0;
+      }
+
+      a {
+        word-wrap: break-word;
+      }
+
+      /* Responsive styles */
+      @media screen and (max-width: 600px) {
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+          -webkit-text-size-adjust: none !important;
+        }
+
+        body {
+          width: 100% !important;
+          min-width: 100% !important;
+        }
+
+        td[id="bodyCell"] {
+          padding: 10px !important;
+        }
+
+        table[class="mobileContentContainer"] {
+          width: 100% !important;
+        }
+
+        table[class="footerContainer"] {
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="background-color: rgb(243 243 243)">
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="background-color: rgb(243 243 243); font-family: Segoe UI, Verdana"
+    >
+      <tr>
+        <td align="center" valign="top" id="bodyCell">
+          <!-- Email content -->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 650px"
+            class="mobileContentContainer"
+          >
+            <tr>
+              <td align="center" valign="top">
+                <!-- Email Body -->
+                <table
+                  border="0"
+                  cellpadding="15"
+                  cellspacing="10"
+                  width="100%"
+                  style="background-color: rgb(255 255 255)"
+                >
+                  <tr>
+                    <td>
+                      <p style="font-size: 1em; text-align: left">
+                        Dear {{ name }}!
+                      </p>
+                      <p style="font-size: 1em; text-align: left">
+                        These changes have been made to ensure that your role
+                        aligns more effectively with your responsibilities and
+                        contributions within the portal. Your employee ID is
+                        {{employee_id }}.
+                      </p>
+                      <p style="font-size: 1em; text-align: left">
+                        This is the Sample Email Template in HTML.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  border="0"
+                  cellpadding="15"
+                  cellspacing="10"
+                  width="100%"
+                  style="background-color: rgb(255 255 255); text-align: center"
+                >
+                  <tr>
+                    <td>
+                      <p style="font-size: 1em; text-align: left; margin: 0">
+                        Best regards,<br />DE Team Wallero
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <!-- Footer bar -->
+                <table
+                  border="0"
+                  cellpadding="15"
+                  cellspacing="10"
+                  width="100%"
+                  style="background-color: #303030; text-align: center"
+                >
+                  <tr>
+                    <td>
+                      <a
+                        href="data:image/png;base64,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"
+                        style="margin: 5px; text-decoration: none"
+                      >
+                        <img
+                          src="data:image/png;base64,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"
+                          alt="Facebook"
+                          title="Facebook"
+                          width="32px"
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="10"
+                  width="100%"
+                  style="background-color: #303030; text-align: center"
+                >
+                  <tr>
+                    <td>
+                      <p
+                        style="
+                          font-size: 0.8em;
+                          color: #ffffff;
+                          line-height: 18px;
+                        "
+                      >
+                        This is the Sample text for Footer.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- /Email content -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
